@@ -1,0 +1,105 @@
+/* General Body Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5; /* Light gray background */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center vertically for this form */
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #ffffff; /* White background for the main container */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  padding: 30px;
+  width: 100%;
+  max-width: 500px; /* Optimized width for a form */
+  box-sizing: border-box;
+}
+
+/* Back Link Styles */
+.back-link {
+  display: inline-flex; /* Allows SVG and text to be on the same line */
+  align-items: center;
+  text-decoration: none;
+  color: #5a7d9b; /* Muted blue for back link */
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 25px;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #334e68; /* Darker on hover */
+}
+
+.back-link svg {
+  margin-right: 8px;
+  stroke: currentColor; /* Inherit color from parent */
+}
+
+/* Page Title Styles */
+.page-title {
+  color: #334e68; /* Darker blue-gray for heading */
+  font-size: 2.2em;
+  margin-top: 0; /* Remove default top margin */
+  margin-bottom: 30px;
+  font-weight: 600;
+  border-bottom: 1px solid #e0e4eb; /* Subtle separator */
+  padding-bottom: 20px;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block; /* Label on its own line */
+  color: #5a7d9b; /* Muted blue for labels */
+  font-size: 0.95em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d0d6de; /* Light gray border */
+  border-radius: 8px;
+  font-size: 1em;
+  color: #4a5c6f; /* Text color for inputs */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus {
+  outline: none;
+  border-color: #007bff; /* Vibrant blue on focus */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Soft blue glow on focus */
+}
+
+/* Save Button Styles */
+.save-button {
+  background-color: #28a745; /* Green for save button */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2); /* Shadow for button */
+  width: 100%; /* Full width button */
+  margin-top: 20px; /* Space above button */
+}
+
+.save-button:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}

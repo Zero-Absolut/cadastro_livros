@@ -1,0 +1,128 @@
+/* Variáveis de cores baseadas no seu layout de listagem */
+:root {
+  --primary-color: #4caf50; /* Verde, talvez para botões de sucesso ou acentos */
+  --header-bg-color: #2f4f4f; /* Azul/verde escuro para cabeçalhos e fundos principais */
+  --text-color: #333; /* Cor de texto padrão */
+  --light-bg-color: #f4f4f4; /* Fundo claro para o corpo */
+  --button-bg-color: #007bff; /* Azul para botões genéricos (Voltar, Salvar) */
+  --button-hover-color: #0056b3;
+  --border-color: #ddd; /* Cor de borda para inputs e elementos */
+  --input-bg-color: #fff; /* Fundo de inputs */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--light-bg-color);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha ao topo, pois o formulário pode ser alto */
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Limita a largura do container */
+  box-sizing: border-box;
+}
+
+.back-link {
+  display: inline-flex; /* Para alinhar o SVG e o texto */
+  align-items: center;
+  text-decoration: none;
+  color: var(--button-bg-color); /* Usa a cor do botão */
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--button-hover-color);
+}
+
+.back-link svg {
+  margin-right: 8px;
+  color: var(--button-bg-color); /* Garante que o ícone tenha a cor do link */
+}
+
+.page-title {
+  color: var(--header-bg-color); /* Cor de título baseada no cabeçalho */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.book-form .form-group {
+  margin-bottom: 20px;
+}
+
+.book-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.book-form input[type="text"],
+.book-form input[type="number"] {
+  width: calc(100% - 20px); /* Ajusta para padding */
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1em;
+  color: var(--text-color);
+  background-color: var(--input-bg-color);
+  box-sizing: border-box; /* Inclui padding e borda no width */
+}
+
+.book-form input::placeholder {
+  color: #999;
+}
+
+/* Estilo para a mensagem de sucesso/erro (se for adicionada via PHP) */
+.mensagem-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mensagem {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Se você usar classes para sucesso/erro como sugerido anteriormente no PHP */
+.mensagem.success-message {
+  color: green;
+  background-color: #e6ffe6;
+  border: 1px solid green;
+}
+
+.mensagem.error-message {
+  color: red;
+  background-color: #ffe6e6;
+  border: 1px solid red;
+}
+
+.save-button {
+  background-color: var(
+    --button-bg-color
+  ); /* Azul padrão para o botão salvar */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 100%; /* Ocupa a largura total */
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: var(--button-hover-color);
+}

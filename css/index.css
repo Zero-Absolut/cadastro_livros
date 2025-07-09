@@ -1,0 +1,220 @@
+/* General Body Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5; /* Light gray background */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to top for better page flow */
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #ffffff; /* White background for the main container */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  padding: 30px;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  /* Removido justify-content: space-between; para usar gap */
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e0e4eb; /* Subtle separator */
+  padding-bottom: 20px;
+  gap: 15px; /* Define um gap de 15px entre os itens, tanto horizontal quanto vertical */
+}
+
+.header h1 {
+  color: #334e68; /* Darker blue-gray for heading */
+  font-size: 2.2em;
+  margin: 0;
+  font-weight: 600;
+  flex-basis: 100%; /* Ensures H1 takes full width, pushing other items below */
+  text-align: center; /* Centers the title */
+  margin-bottom: 15px; /* Spacing below the title */
+}
+
+.add-button {
+  background-color: #007bff; /* Vibrant blue */
+  color: white;
+  padding: 12px 25px; /* Define o tamanho do botão */
+  border: none;
+  border-radius: 8px; /* Bordas arredondadas */
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Sombra para o botão */
+  flex-grow: 0; /* Não permite que o botão cresça excessivamente */
+  flex-shrink: 0; /* Não permite que o botão encolha excessivamente */
+  min-width: 180px; /* Largura mínima para o botão */
+  max-width: 250px; /* Largura máxima para o botão */
+  text-decoration: none; /* Garante que o link dentro não tenha sublinhado */
+  display: inline-block; /* Permite que padding e transform funcionem corretamente no <a> */
+  box-sizing: border-box; /* Inclui padding e borda na largura/altura total */
+  margin-left: 0; /* Remove margens conflitantes */
+}
+
+.add-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Search Form Styles */
+.search-form {
+  display: flex; /* Alinha o input e o botão lado a lado */
+  gap: 10px; /* Espaço entre o input e o botão */
+  margin: 0; /* Remove margens extras, o header.gap já cuida disso */
+  align-items: center;
+  flex-grow: 1; /* Permite que o formulário cresça para preencher o espaço restante */
+  min-width: 280px; /* Largura mínima para o formulário */
+  max-width: 600px; /* Largura máxima para o formulário */
+  box-sizing: border-box; /* Garante consistência de tamanho */
+}
+
+/* Search Input Text Field Styles */
+.search-input {
+  flex-grow: 1; /* Faz o input ocupar o máximo de espaço disponível */
+  padding: 10px 15px; /* Ajustado para dar volume */
+  border: 1px solid #e0e4eb; /* Cor da borda consistente com a tabela */
+  border-radius: 8px; /* Bordas arredondadas */
+  font-size: 1em;
+  outline: none; /* Remove a borda de foco padrão do navegador */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+  height: 49px; /* Altura definida para corresponder aos botões com padding de 12px */
+  box-sizing: border-box; /* Inclui padding e borda na altura/largura total */
+}
+
+.search-input::placeholder {
+  color: #9aa9b9; /* Placeholder text color */
+}
+
+.search-input:focus {
+  border-color: #007bff; /* Border color on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Soft shadow on focus */
+}
+
+/* Search Button Styles */
+.search-button {
+  background-color: #6c757d; /* Um cinza para o botão de pesquisar */
+  color: white;
+  padding: 12px 25px; /* Ajustado para ter o mesmo padding do .add-button */
+  border: none;
+  border-radius: 8px; /* Bordas arredondadas */
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(108, 117, 125, 0.2); /* Sombra para o botão */
+  flex-shrink: 0; /* Impede que o botão encolha demais */
+  height: 49px; /* Defini altura explícita para igualar o input e outros botões */
+  box-sizing: border-box; /* Inclui padding e borda na altura/largura total */
+}
+
+.search-button:hover {
+  background-color: #5a6268; /* Tom mais escuro no hover */
+  transform: translateY(-2px);
+}
+
+/* Table Styles */
+.table-container {
+  overflow-x: auto; /* Ensures responsiveness for smaller screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: separate; /* Allows border-radius on cells */
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden; /* Ensures rounded corners apply to content */
+}
+
+table thead {
+  background-color: #f7f9fc; /* Very light blue for table header */
+}
+
+table th {
+  text-align: left;
+  padding: 15px 20px;
+  color: #5a7d9b; /* Muted blue for header text */
+  font-weight: 600;
+  font-size: 0.95em;
+  border-bottom: 1px solid #e0e4eb;
+}
+
+table td {
+  padding: 15px 20px;
+  color: #4a5c6f; /* Slightly darker text for table body */
+  border-bottom: 1px solid #f0f2f5; /* Lighter border between rows */
+}
+
+table tbody tr:last-child td {
+  border-bottom: none; /* No border for the last row */
+}
+
+table tbody tr:hover {
+  background-color: #f8fbfd; /* Very subtle hover effect for rows */
+}
+
+/* Action Button Styles within Table - AJUSTADO PARA O EDITAR */
+.actions {
+  white-space: nowrap; /* Prevents buttons from wrapping */
+  display: flex; /* Adicionado para alinhar os botões lado a lado */
+  flex-direction: column; /* Coloca os botões um embaixo do outro */
+  gap: 8px; /* Espaço entre os botões Editar e Excluir */
+  align-items: flex-end; /* Alinha os botões à direita da célula */
+  justify-content: center; /* Centraliza verticalmente o grupo de botões na célula */
+  height: 100%; /* Garante que o flex container ocupe a altura total da célula */
+}
+
+/* Base para ambos os botões para garantir dimensões consistentes */
+/* Aplicado a <a>.edit-button e <button>.delete-button */
+.actions .edit-button,
+.actions .delete-button {
+  padding: 10px 20px; /* Ajustado para um padding que dê uma boa dimensão */
+  border: none;
+  border-radius: 6px; /* Para as bordas arredondadas */
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%; /* Faz com que ocupe 100% da largura disponível na coluna actions */
+  max-width: 100px; /* Limita a largura máxima para não ficarem muito grandes */
+  box-sizing: border-box; /* Inclui padding e borda na dimensão total */
+  text-align: center; /* Centraliza o texto no botão */
+  height: 38px; /* Altura explícita para consistência */
+  /* Para centralizar o texto vertical e horizontalmente dentro do botão */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Garante que o link não tenha sublinhado */
+  color: white; /* Garante que a cor do texto seja branca para ambos */
+}
+
+/* Estilo específico para o botão EDITAR (agora aplicado ao <a>) */
+.actions .edit-button {
+  background-color: #28a745; /* Verde para editar */
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);
+}
+
+.actions .edit-button:hover {
+  background-color: #218838; /* Verde mais escuro no hover */
+  transform: translateY(-1px);
+}
+
+/* Estilo para o botão EXCLUIR (aplicado ao <button>) */
+.actions .delete-button {
+  background-color: #dc3545; /* Vermelho para excluir */
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.2);
+}
+
+.actions .delete-button:hover {
+  background-color: #c82333; /* Vermelho mais escuro no hover */
+  transform: translateY(-1px);
+}
